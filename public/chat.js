@@ -1,0 +1,24 @@
+    // Connecting To socket.io
+    var socket = io.connect("http://localhost:8000/");
+    var message = document.getElementById("message");
+    var handle = document.getElementById("handle");
+    var btn = document.getElementById("send");
+    var output = document.getElementById("output");
+    var feedback = document.getElementById("feedback");
+
+    // btn addEventListener
+    btn.addEventListener("click",function(){
+        socket.emit("chat",{
+            message: message.value,
+            handle: handle.value
+        });
+    });
+
+
+    socket.on('chat', function (data) {
+        if(data.message) {
+            output.innerHTML += '<p><strong>'+ data.handle +'</strong>: '+ data.message+'</p>';
+        } else {
+            console.log("There is a problem:", data);
+        }
+    });

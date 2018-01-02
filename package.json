@@ -1,0 +1,19 @@
+{
+  "name": "real_time_chat",
+  "version": "1.0.0",
+  "description": "Demonstration for Nodejs_Expressjs_SocketIO_Real_Time_Chat",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JKTAN",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "jquery": "^3.2.1",
+    "socket.io": "^2.0.4"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.7"
+  }
+}
